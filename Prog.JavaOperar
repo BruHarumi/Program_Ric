@@ -1,0 +1,32 @@
+public static int operar(int a) {
+    a = a * 10;
+    return a;
+}
+
+public static int[] incrementar(int[] v) {
+    for (int i = 0; i < v.length; i++) { v[i] += 1; }
+    return v;
+}
+
+public static int[] recriar(int[] s) {
+    // Por padrão, um novo arranjo em Java vem preenchido por 0 (zeros).
+    s = new int[3];
+    return s;
+}
+
+public static void main(String[] args) {
+    int[] v = { 1, 2, 3 };
+    int[] s = { 4, 8, 16 };
+    int a = operar(v[0] + v[1] * s[1]);
+
+    operar(a);
+    incrementar(v);
+    recriar(s);
+    
+    System.out.println(a);
+    System.out.printf("%d,%d,%d\n", v[0], v[1], v[2]);
+    System.out.printf("%d,%d,%d\n", s[0], s[1], s[2]);
+    /* Este método printf apenas imprime cada valor dos arranjos,
+    * separados por vírgulas. */
+}
+
